@@ -12,19 +12,23 @@ class App extends React.Component{
       cardInfo: []
     }
   }
+
   componentDidMount() {
     axios
     .get(url)
     .then(res => {
-       console.log(res.data)
-    })
-
+       this.setState({
+         cardInfo: res.data
+       })
+       console.log(this.state.cardInfo)
+    })  
   }
+  
   render(){
     return(
       <div className='App'>
       This is on the screen :)
-      <Card />
+      <Card card={this.state.cardInfo}/>
       </div>
     )
   }
