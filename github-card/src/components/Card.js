@@ -1,19 +1,27 @@
-import React from 'react';
+import React, { Component } from 'react';
+import axios from 'axios';
 
-const Card = props => {
-    return (
-        <div className='cardC'>
+const urlFollowers = 'https://api.github.com/users/Juan-Rivera/followers';
+
+class Card extends Component{
+    constructor(props){
+        super(props);
+    }
+    render(){
+        return (
+            <div className='cardC'>
                 <div className='avatar'>
-                        <img src={props.card.avatar_url} alt={props.card.name} />
+                        <img src={this.props.card.avatar_url} alt={this.props.card.name} />
                     </div>
                 <div className='info'>
-                        <h3>{props.card.name}</h3>
-                        <p>Username: {props.card.login}</p>
-                        <p>Location: {props.card.location}</p>
-                        <a href={props.card.html_url}>Profile</a>
-                        <p>Followers: {props.card.followers}</p>
+                        <h3>{this.props.card.name}</h3>
+                        <p>Username: {this.props.card.login}</p>
+                        <p>Location: {this.props.card.location}</p>
+                        <a href={this.props.card.html_url}>Profile</a>
+                        <p>Followers: {this.props.card.followers}</p>
                     </div>
             </div>
-    )
+        )
+    }
 }
 export default Card
