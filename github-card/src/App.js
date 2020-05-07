@@ -23,12 +23,11 @@ class App extends React.Component{
        console.log(this.state.cardInfo)
     })  
   }
-  
+
   render(){
     return(
       <div className='App'>
-      This is on the screen :)
-      <Card card={this.state.cardInfo}/>
+        <Card card={this.state.cardInfo}/>
       </div>
     )
   }
