@@ -10,6 +10,7 @@ class App extends React.Component{
     super();
     this.state = {
       cardInfo: []
+
     }
   }
 
@@ -21,7 +22,8 @@ class App extends React.Component{
          cardInfo: res.data
        })
        console.log(this.state.cardInfo)
-    })  
+    })
+      
   }
 
   render(){
