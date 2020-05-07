@@ -34,6 +34,7 @@ class Card extends Component{
                         <p>Location: {this.props.card.location}</p>
                         <a href={this.props.card.html_url}>Profile (click here)</a>
                         <p>Followers: {this.state.followerD}</p>
+                        
                     </div>
             </div>
         )
